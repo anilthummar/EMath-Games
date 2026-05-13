@@ -30,7 +30,7 @@ class Es extends AppString {
   String get dashboardPageKey => "Panel";
 
   @override
-  String get loadingKey => "Cargando...";
+  String get loadingKey => "Cargando";
 
   @override
   String get successMsgKey => "API llamada con exito";
@@ -254,4 +254,10 @@ class Es extends AppString {
 
   @override
   String get startNowKey => "Comienza";
+
+  @override
+  String get splashInfinitySymbolKey => '∞';
+
+  @override
+  String get splashVersionPrefixKey => 'Versión';
 }

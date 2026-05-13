@@ -40,8 +40,12 @@ abstract class Dimens {
   static const double space48 = 48;
   static const double space50 = 50;
   static const double space56 = 56;
+  static const double space60 = 60;
   static const double space65 = 65;
   static const double space80 = 80;
+  static const double space100 = 100;
+  static const double space120 = 120;
+  static const double space180 = 180;
   static const double space70 = 70;
   static const double space72 = 72;
   static const double space75 = 75;
@@ -121,6 +125,33 @@ abstract class Dimens {
   static const int maxLines02 = 2;
   static const int maxLines03 = 3;
 
+  /// Splash title letter spacing.
+  static const double letterSpacingSplashTitle = 1.2;
+
+  /// Splash version label letter spacing.
+  static const double letterSpacingVersionLabel = 0.5;
+
+  /// Top `Expanded` flex on splash (blue hero vs bottom curve).
+  static const int splashTopExpandedFlex = 6;
+
+  /// Progress animation tween start.
+  static const double splashProgressTweenStart = 0.0;
+
+  /// Progress animation tween end.
+  static const double splashProgressTweenEnd = 1.0;
+
+  /// Outer rotation (π/4 rad) for splash diamond FAB container.
+  static const double splashDiamondOuterRotationRad = 0.785398;
+
+  /// Inner counter-rotation (−π/4 rad) for splash diamond FAB child.
+  static const double splashDiamondInnerRotationRad = -0.785398;
+
+  /// Max width for splash app logo SVG (`ic_app_logo.svg`).
+  static const double splashLogoSvgWidth = 220;
+
+  /// Max width for splash illustration SVG (`ic_illustration.svg`).
+  static const double splashIllustrationSvgWidth = 320;
+
   //ratio
   static const double ratio01 = 0.1;
   static const double ratio009 = 0.09;
@@ -163,6 +194,11 @@ abstract class Dimens {
 
   //opacity
   static const double opacity014 = 0.14;
+  static const double opacity006 = 0.06;
+  static const double opacity008 = 0.08;
+  static const double opacity02 = 0.2;
+  static const double opacity03 = 0.3;
+  static const double opacity04 = 0.4;
   static const int otpLength = 6;
 
   //duration

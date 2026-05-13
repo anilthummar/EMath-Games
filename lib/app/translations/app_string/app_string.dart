@@ -256,4 +256,10 @@ abstract class AppString {
 
   /// CTA text shown on the start screen.
   String get startNowKey;
+
+  /// Infinity symbol shown beside loading on splash.
+  String get splashInfinitySymbolKey;
+
+  /// Prefix before app version on splash (e.g. “Version”).
+  String get splashVersionPrefixKey;
 }

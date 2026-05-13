@@ -30,7 +30,7 @@ class EnUS extends AppString {
   String get dashboardPageKey => "Dashboard Page";
 
   @override
-  String get loadingKey => "Loading...";
+  String get loadingKey => "Loading";
 
   @override
   String get successMsgKey => "Api called successfully";
@@ -255,4 +255,10 @@ class EnUS extends AppString {
 
   @override
   String get startNowKey => "Start";
+
+  @override
+  String get splashInfinitySymbolKey => '∞';
+
+  @override
+  String get splashVersionPrefixKey => 'Version';
 }

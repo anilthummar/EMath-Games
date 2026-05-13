@@ -30,7 +30,7 @@ class HiIN extends AppString {
   String get dashboardPageKey => "डैशबोर्ड पेजe";
 
   @override
-  String get loadingKey => "लोड हो रहा है...";
+  String get loadingKey => "लोड हो रहा है";
 
   @override
   String get successMsgKey => "एपीआई सफलतापूर्वक कॉल किया गया";
@@ -256,4 +256,10 @@ class HiIN extends AppString {
 
   @override
   String get startNowKey => "शुरू करें";
+
+  @override
+  String get splashInfinitySymbolKey => '∞';
+
+  @override
+  String get splashVersionPrefixKey => 'संस्करण';
 }

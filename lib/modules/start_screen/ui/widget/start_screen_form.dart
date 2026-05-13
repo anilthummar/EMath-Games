@@ -239,20 +239,28 @@ class _OperationCard extends StatelessWidget {
           ),
           Center(
             child: Padding(
-              padding: const EdgeInsets.all(Dimens.padding10),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  item.icon.image(width: Dimens.space28, height: Dimens.space28),
-                  const SizedBox(height: Dimens.space4),
-                  Text(
-                    '${item.title} ${item.symbol}',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                          color: AppColors.whiteColor,
-                        ),
-                  ),
-                ],
+              padding: const EdgeInsets.symmetric(
+                horizontal: Dimens.padding10,
+                vertical: Dimens.padding4,
+              ),
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    item.icon.image(width: Dimens.space28, height: Dimens.space28),
+                    const SizedBox(height: Dimens.space4),
+                    CustomTextLabelWidget(
+                      label: '${item.title} ${item.symbol}',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                            color: AppColors.whiteColor,
+                            fontWeight: FontWeight.w600,
+                          ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

@@ -5,6 +5,7 @@ export 'button/button.dart';
 export 'custom_divider.dart';
 export 'custom_network_image_widget.dart';
 export 'custom_snackbar_widget.dart';
+export 'custom_svg_asset_widget.dart';
 export 'dialog_utils.dart';
 export 'dotted_border/dotted_border.dart';
 export 'dropdown/dropdown.dart';

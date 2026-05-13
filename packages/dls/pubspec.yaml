@@ -1,0 +1,15 @@
+name: dls
+description: Design Language System - theme, colors, typography, extensions.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.3.2
+
+dev_dependencies:
+  flutter_lints: ^2.0.3

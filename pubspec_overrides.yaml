@@ -1,0 +1,28 @@
+# melos_managed_dependency_overrides: network,localization,app_logger,common,config,database,dls,fnc,notifications,storage,app_sentry,permission
+dependency_overrides:
+  app_logger:
+    path: packages/logger
+  app_sentry:
+    path: packages/sentry
+  common:
+    path: packages/common
+  config:
+    path: packages/config
+  database:
+    path: packages/database
+  dls:
+    path: packages/dls
+  fnc:
+    path: packages/fnc
+  localization:
+    path: packages/localization
+  network:
+    path: packages/network
+  graphql_client:
+    path: packages/graphql
+  notifications:
+    path: packages/notifications
+  permission:
+    path: packages/permission
+  storage:
+    path: packages/storage

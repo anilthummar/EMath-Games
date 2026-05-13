@@ -1,0 +1,16 @@
+name: fnc
+description: Utility functions - date, encryption, regex, scroll behaviour.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies:
+  encrypt: ^5.0.1
+  flutter:
+    sdk: flutter
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_lints: ^2.0.3

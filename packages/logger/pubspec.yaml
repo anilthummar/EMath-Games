@@ -1,0 +1,17 @@
+name: app_logger
+description: Logging utilities for debug and production.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  logger: ^2.6.2
+  path_provider: ^2.1.5
+  universal_html: ^2.3.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.3

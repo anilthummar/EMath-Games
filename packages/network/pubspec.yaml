@@ -1,0 +1,12 @@
+name: network
+description: Shared network layer - response handling and base repository.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies: {}
+
+dev_dependencies:
+  flutter_lints: ^2.0.3

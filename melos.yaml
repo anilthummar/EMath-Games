@@ -1,0 +1,45 @@
+name: flutter_base
+packages:
+  - "."
+  - "packages/config"
+  - "packages/database"
+  - "packages/dls"
+  - "packages/fnc"
+  - "packages/localization"
+  - "packages/network"
+  - "packages/graphql"
+  - "packages/notifications"
+  - "packages/permission"
+  - "packages/sentry"
+  - "packages/storage"
+  - "packages/logger"
+  - "packages/common"
+
+scripts:
+  bootstrap:
+    run: melos bootstrap
+    description: Install dependencies and link local packages
+  run:app:
+    run: melos exec -d . -- flutter run
+    description: Run the main Flutter app
+  build:apk:
+    run: melos exec -d . -- flutter build apk
+    description: Build release APK
+  build:ios:
+    run: melos exec -d . -- flutter build ios
+    description: Build iOS
+  clean:
+    run: melos exec -- flutter clean
+    description: Clean all packages and the app
+  analyze:
+    run: melos exec -- dart analyze .
+    description: Run dart analyze in all packages
+  test:
+    run: melos exec -- flutter test
+    description: Run tests in all packages
+  format:
+    run: melos exec -- dart format .
+    description: Format all Dart files
+  format:check:
+    run: melos exec -- dart format --set-exit-if-changed .
+    description: Check formatting (CI)

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "687872937809",
+    "project_id": "easy-maths-8726c",
+    "storage_bucket": "easy-maths-8726c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687872937809:android:33cde6255aad607922cd70",
+        "android_client_info": {
+          "package_name": "com.easy.maths"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmmzjzwoemNF_4czN1rV9eCYSMUEn2IQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

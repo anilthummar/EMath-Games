@@ -1,0 +1,6 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    public_member_api_docs: ignore
+    avoid_classes_with_only_static_members: ignore

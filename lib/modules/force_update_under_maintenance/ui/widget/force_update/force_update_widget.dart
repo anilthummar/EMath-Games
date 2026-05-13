@@ -62,7 +62,7 @@ class ForceUpdateWidget extends BaseResponsiveView {
             context: context,
           );
           if (!isMandatory && context.mounted) {
-            context.instance<ForceUpdateUnderMaintenanceBloc>().redirectToLogin();
+            context.instance<ForceUpdateUnderMaintenanceBloc>().redirectToStartScreen();
           }
         }
       },
@@ -110,7 +110,7 @@ class ForceUpdateWidget extends BaseResponsiveView {
               unawaited(goBack(context));
               context
                   .instance<ForceUpdateUnderMaintenanceBloc>()
-                  .redirectToLogin();
+                  .redirectToStartScreen();
             },
           ),
         );

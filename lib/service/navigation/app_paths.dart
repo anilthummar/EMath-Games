@@ -2,8 +2,8 @@
 ///
 /// These paths are used for navigation within the application.
 abstract class AppPaths {
-  /// The path for the login page.
-  static const String login = '/login';
+  /// The path for the start screen (post-splash entry).
+  static const String startScreen = '/start-screen';
 
   /// The path for the dashboard page.
   static const String dashboard = '/dashboard';

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_event.dart';
+part of 'start_screen_event.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$LoginEvent {
+mixin _$StartScreenEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String email) emailChanged,
@@ -40,39 +40,39 @@ mixin _$LoginEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoginEmailChanged value) emailChanged,
-    required TResult Function(LoginPasswordChanged value) passwordChanged,
-    required TResult Function(LoginSubmitted value) submitted,
+    required TResult Function(StartScreenEmailChanged value) emailChanged,
+    required TResult Function(StartScreenPasswordChanged value) passwordChanged,
+    required TResult Function(StartScreenSubmitted value) submitted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginEmailChanged value)? emailChanged,
-    TResult? Function(LoginPasswordChanged value)? passwordChanged,
-    TResult? Function(LoginSubmitted value)? submitted,
+    TResult? Function(StartScreenEmailChanged value)? emailChanged,
+    TResult? Function(StartScreenPasswordChanged value)? passwordChanged,
+    TResult? Function(StartScreenSubmitted value)? submitted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginEmailChanged value)? emailChanged,
-    TResult Function(LoginPasswordChanged value)? passwordChanged,
-    TResult Function(LoginSubmitted value)? submitted,
+    TResult Function(StartScreenEmailChanged value)? emailChanged,
+    TResult Function(StartScreenPasswordChanged value)? passwordChanged,
+    TResult Function(StartScreenSubmitted value)? submitted,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginEventCopyWith<$Res> {
-  factory $LoginEventCopyWith(
-          LoginEvent value, $Res Function(LoginEvent) then) =
-      _$LoginEventCopyWithImpl<$Res, LoginEvent>;
+abstract class $StartScreenEventCopyWith<$Res> {
+  factory $StartScreenEventCopyWith(
+          StartScreenEvent value, $Res Function(StartScreenEvent) then) =
+      _$StartScreenEventCopyWithImpl<$Res, StartScreenEvent>;
 }
 
 /// @nodoc
-class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
-    implements $LoginEventCopyWith<$Res> {
-  _$LoginEventCopyWithImpl(this._value, this._then);
+class _$StartScreenEventCopyWithImpl<$Res, $Val extends StartScreenEvent>
+    implements $StartScreenEventCopyWith<$Res> {
+  _$StartScreenEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -81,20 +81,22 @@ class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
 }
 
 /// @nodoc
-abstract class _$$LoginEmailChangedImplCopyWith<$Res> {
-  factory _$$LoginEmailChangedImplCopyWith(_$LoginEmailChangedImpl value,
-          $Res Function(_$LoginEmailChangedImpl) then) =
-      __$$LoginEmailChangedImplCopyWithImpl<$Res>;
+abstract class _$$StartScreenEmailChangedImplCopyWith<$Res> {
+  factory _$$StartScreenEmailChangedImplCopyWith(
+          _$StartScreenEmailChangedImpl value,
+          $Res Function(_$StartScreenEmailChangedImpl) then) =
+      __$$StartScreenEmailChangedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String email});
 }
 
 /// @nodoc
-class __$$LoginEmailChangedImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginEmailChangedImpl>
-    implements _$$LoginEmailChangedImplCopyWith<$Res> {
-  __$$LoginEmailChangedImplCopyWithImpl(_$LoginEmailChangedImpl _value,
-      $Res Function(_$LoginEmailChangedImpl) _then)
+class __$$StartScreenEmailChangedImplCopyWithImpl<$Res>
+    extends _$StartScreenEventCopyWithImpl<$Res, _$StartScreenEmailChangedImpl>
+    implements _$$StartScreenEmailChangedImplCopyWith<$Res> {
+  __$$StartScreenEmailChangedImplCopyWithImpl(
+      _$StartScreenEmailChangedImpl _value,
+      $Res Function(_$StartScreenEmailChangedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +104,7 @@ class __$$LoginEmailChangedImplCopyWithImpl<$Res>
   $Res call({
     Object? email = null,
   }) {
-    return _then(_$LoginEmailChangedImpl(
+    return _then(_$StartScreenEmailChangedImpl(
       null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -113,24 +115,24 @@ class __$$LoginEmailChangedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoginEmailChangedImpl
+class _$StartScreenEmailChangedImpl
     with DiagnosticableTreeMixin
-    implements LoginEmailChanged {
-  const _$LoginEmailChangedImpl(this.email);
+    implements StartScreenEmailChanged {
+  const _$StartScreenEmailChangedImpl(this.email);
 
   @override
   final String email;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginEvent.emailChanged(email: $email)';
+    return 'StartScreenEvent.emailChanged(email: $email)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'LoginEvent.emailChanged'))
+      ..add(DiagnosticsProperty('type', 'StartScreenEvent.emailChanged'))
       ..add(DiagnosticsProperty('email', email));
   }
 
@@ -138,7 +140,7 @@ class _$LoginEmailChangedImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginEmailChangedImpl &&
+            other is _$StartScreenEmailChangedImpl &&
             (identical(other.email, email) || other.email == email));
   }
 
@@ -148,9 +150,9 @@ class _$LoginEmailChangedImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoginEmailChangedImplCopyWith<_$LoginEmailChangedImpl> get copyWith =>
-      __$$LoginEmailChangedImplCopyWithImpl<_$LoginEmailChangedImpl>(
-          this, _$identity);
+  _$$StartScreenEmailChangedImplCopyWith<_$StartScreenEmailChangedImpl>
+      get copyWith => __$$StartScreenEmailChangedImplCopyWithImpl<
+          _$StartScreenEmailChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -189,9 +191,9 @@ class _$LoginEmailChangedImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoginEmailChanged value) emailChanged,
-    required TResult Function(LoginPasswordChanged value) passwordChanged,
-    required TResult Function(LoginSubmitted value) submitted,
+    required TResult Function(StartScreenEmailChanged value) emailChanged,
+    required TResult Function(StartScreenPasswordChanged value) passwordChanged,
+    required TResult Function(StartScreenSubmitted value) submitted,
   }) {
     return emailChanged(this);
   }
@@ -199,9 +201,9 @@ class _$LoginEmailChangedImpl
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginEmailChanged value)? emailChanged,
-    TResult? Function(LoginPasswordChanged value)? passwordChanged,
-    TResult? Function(LoginSubmitted value)? submitted,
+    TResult? Function(StartScreenEmailChanged value)? emailChanged,
+    TResult? Function(StartScreenPasswordChanged value)? passwordChanged,
+    TResult? Function(StartScreenSubmitted value)? submitted,
   }) {
     return emailChanged?.call(this);
   }
@@ -209,9 +211,9 @@ class _$LoginEmailChangedImpl
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginEmailChanged value)? emailChanged,
-    TResult Function(LoginPasswordChanged value)? passwordChanged,
-    TResult Function(LoginSubmitted value)? submitted,
+    TResult Function(StartScreenEmailChanged value)? emailChanged,
+    TResult Function(StartScreenPasswordChanged value)? passwordChanged,
+    TResult Function(StartScreenSubmitted value)? submitted,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -221,30 +223,34 @@ class _$LoginEmailChangedImpl
   }
 }
 
-abstract class LoginEmailChanged implements LoginEvent {
-  const factory LoginEmailChanged(final String email) = _$LoginEmailChangedImpl;
+abstract class StartScreenEmailChanged implements StartScreenEvent {
+  const factory StartScreenEmailChanged(final String email) =
+      _$StartScreenEmailChangedImpl;
 
   String get email;
   @JsonKey(ignore: true)
-  _$$LoginEmailChangedImplCopyWith<_$LoginEmailChangedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$StartScreenEmailChangedImplCopyWith<_$StartScreenEmailChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoginPasswordChangedImplCopyWith<$Res> {
-  factory _$$LoginPasswordChangedImplCopyWith(_$LoginPasswordChangedImpl value,
-          $Res Function(_$LoginPasswordChangedImpl) then) =
-      __$$LoginPasswordChangedImplCopyWithImpl<$Res>;
+abstract class _$$StartScreenPasswordChangedImplCopyWith<$Res> {
+  factory _$$StartScreenPasswordChangedImplCopyWith(
+          _$StartScreenPasswordChangedImpl value,
+          $Res Function(_$StartScreenPasswordChangedImpl) then) =
+      __$$StartScreenPasswordChangedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String password});
 }
 
 /// @nodoc
-class __$$LoginPasswordChangedImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginPasswordChangedImpl>
-    implements _$$LoginPasswordChangedImplCopyWith<$Res> {
-  __$$LoginPasswordChangedImplCopyWithImpl(_$LoginPasswordChangedImpl _value,
-      $Res Function(_$LoginPasswordChangedImpl) _then)
+class __$$StartScreenPasswordChangedImplCopyWithImpl<$Res>
+    extends _$StartScreenEventCopyWithImpl<$Res,
+        _$StartScreenPasswordChangedImpl>
+    implements _$$StartScreenPasswordChangedImplCopyWith<$Res> {
+  __$$StartScreenPasswordChangedImplCopyWithImpl(
+      _$StartScreenPasswordChangedImpl _value,
+      $Res Function(_$StartScreenPasswordChangedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -252,7 +258,7 @@ class __$$LoginPasswordChangedImplCopyWithImpl<$Res>
   $Res call({
     Object? password = null,
   }) {
-    return _then(_$LoginPasswordChangedImpl(
+    return _then(_$StartScreenPasswordChangedImpl(
       null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
@@ -263,24 +269,24 @@ class __$$LoginPasswordChangedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoginPasswordChangedImpl
+class _$StartScreenPasswordChangedImpl
     with DiagnosticableTreeMixin
-    implements LoginPasswordChanged {
-  const _$LoginPasswordChangedImpl(this.password);
+    implements StartScreenPasswordChanged {
+  const _$StartScreenPasswordChangedImpl(this.password);
 
   @override
   final String password;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginEvent.passwordChanged(password: $password)';
+    return 'StartScreenEvent.passwordChanged(password: $password)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'LoginEvent.passwordChanged'))
+      ..add(DiagnosticsProperty('type', 'StartScreenEvent.passwordChanged'))
       ..add(DiagnosticsProperty('password', password));
   }
 
@@ -288,7 +294,7 @@ class _$LoginPasswordChangedImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginPasswordChangedImpl &&
+            other is _$StartScreenPasswordChangedImpl &&
             (identical(other.password, password) ||
                 other.password == password));
   }
@@ -299,10 +305,9 @@ class _$LoginPasswordChangedImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoginPasswordChangedImplCopyWith<_$LoginPasswordChangedImpl>
-      get copyWith =>
-          __$$LoginPasswordChangedImplCopyWithImpl<_$LoginPasswordChangedImpl>(
-              this, _$identity);
+  _$$StartScreenPasswordChangedImplCopyWith<_$StartScreenPasswordChangedImpl>
+      get copyWith => __$$StartScreenPasswordChangedImplCopyWithImpl<
+          _$StartScreenPasswordChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -341,9 +346,9 @@ class _$LoginPasswordChangedImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoginEmailChanged value) emailChanged,
-    required TResult Function(LoginPasswordChanged value) passwordChanged,
-    required TResult Function(LoginSubmitted value) submitted,
+    required TResult Function(StartScreenEmailChanged value) emailChanged,
+    required TResult Function(StartScreenPasswordChanged value) passwordChanged,
+    required TResult Function(StartScreenSubmitted value) submitted,
   }) {
     return passwordChanged(this);
   }
@@ -351,9 +356,9 @@ class _$LoginPasswordChangedImpl
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginEmailChanged value)? emailChanged,
-    TResult? Function(LoginPasswordChanged value)? passwordChanged,
-    TResult? Function(LoginSubmitted value)? submitted,
+    TResult? Function(StartScreenEmailChanged value)? emailChanged,
+    TResult? Function(StartScreenPasswordChanged value)? passwordChanged,
+    TResult? Function(StartScreenSubmitted value)? submitted,
   }) {
     return passwordChanged?.call(this);
   }
@@ -361,9 +366,9 @@ class _$LoginPasswordChangedImpl
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginEmailChanged value)? emailChanged,
-    TResult Function(LoginPasswordChanged value)? passwordChanged,
-    TResult Function(LoginSubmitted value)? submitted,
+    TResult Function(StartScreenEmailChanged value)? emailChanged,
+    TResult Function(StartScreenPasswordChanged value)? passwordChanged,
+    TResult Function(StartScreenSubmitted value)? submitted,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -373,54 +378,55 @@ class _$LoginPasswordChangedImpl
   }
 }
 
-abstract class LoginPasswordChanged implements LoginEvent {
-  const factory LoginPasswordChanged(final String password) =
-      _$LoginPasswordChangedImpl;
+abstract class StartScreenPasswordChanged implements StartScreenEvent {
+  const factory StartScreenPasswordChanged(final String password) =
+      _$StartScreenPasswordChangedImpl;
 
   String get password;
   @JsonKey(ignore: true)
-  _$$LoginPasswordChangedImplCopyWith<_$LoginPasswordChangedImpl>
+  _$$StartScreenPasswordChangedImplCopyWith<_$StartScreenPasswordChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoginSubmittedImplCopyWith<$Res> {
-  factory _$$LoginSubmittedImplCopyWith(_$LoginSubmittedImpl value,
-          $Res Function(_$LoginSubmittedImpl) then) =
-      __$$LoginSubmittedImplCopyWithImpl<$Res>;
+abstract class _$$StartScreenSubmittedImplCopyWith<$Res> {
+  factory _$$StartScreenSubmittedImplCopyWith(_$StartScreenSubmittedImpl value,
+          $Res Function(_$StartScreenSubmittedImpl) then) =
+      __$$StartScreenSubmittedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoginSubmittedImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginSubmittedImpl>
-    implements _$$LoginSubmittedImplCopyWith<$Res> {
-  __$$LoginSubmittedImplCopyWithImpl(
-      _$LoginSubmittedImpl _value, $Res Function(_$LoginSubmittedImpl) _then)
+class __$$StartScreenSubmittedImplCopyWithImpl<$Res>
+    extends _$StartScreenEventCopyWithImpl<$Res, _$StartScreenSubmittedImpl>
+    implements _$$StartScreenSubmittedImplCopyWith<$Res> {
+  __$$StartScreenSubmittedImplCopyWithImpl(_$StartScreenSubmittedImpl _value,
+      $Res Function(_$StartScreenSubmittedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoginSubmittedImpl
+class _$StartScreenSubmittedImpl
     with DiagnosticableTreeMixin
-    implements LoginSubmitted {
-  const _$LoginSubmittedImpl();
+    implements StartScreenSubmitted {
+  const _$StartScreenSubmittedImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginEvent.submitted()';
+    return 'StartScreenEvent.submitted()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'LoginEvent.submitted'));
+    properties.add(DiagnosticsProperty('type', 'StartScreenEvent.submitted'));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoginSubmittedImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$StartScreenSubmittedImpl);
   }
 
   @override
@@ -463,9 +469,9 @@ class _$LoginSubmittedImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoginEmailChanged value) emailChanged,
-    required TResult Function(LoginPasswordChanged value) passwordChanged,
-    required TResult Function(LoginSubmitted value) submitted,
+    required TResult Function(StartScreenEmailChanged value) emailChanged,
+    required TResult Function(StartScreenPasswordChanged value) passwordChanged,
+    required TResult Function(StartScreenSubmitted value) submitted,
   }) {
     return submitted(this);
   }
@@ -473,9 +479,9 @@ class _$LoginSubmittedImpl
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginEmailChanged value)? emailChanged,
-    TResult? Function(LoginPasswordChanged value)? passwordChanged,
-    TResult? Function(LoginSubmitted value)? submitted,
+    TResult? Function(StartScreenEmailChanged value)? emailChanged,
+    TResult? Function(StartScreenPasswordChanged value)? passwordChanged,
+    TResult? Function(StartScreenSubmitted value)? submitted,
   }) {
     return submitted?.call(this);
   }
@@ -483,9 +489,9 @@ class _$LoginSubmittedImpl
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginEmailChanged value)? emailChanged,
-    TResult Function(LoginPasswordChanged value)? passwordChanged,
-    TResult Function(LoginSubmitted value)? submitted,
+    TResult Function(StartScreenEmailChanged value)? emailChanged,
+    TResult Function(StartScreenPasswordChanged value)? passwordChanged,
+    TResult Function(StartScreenSubmitted value)? submitted,
     required TResult orElse(),
   }) {
     if (submitted != null) {
@@ -495,6 +501,6 @@ class _$LoginSubmittedImpl
   }
 }
 
-abstract class LoginSubmitted implements LoginEvent {
-  const factory LoginSubmitted() = _$LoginSubmittedImpl;
+abstract class StartScreenSubmitted implements StartScreenEvent {
+  const factory StartScreenSubmitted() = _$StartScreenSubmittedImpl;
 }

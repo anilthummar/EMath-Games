@@ -6,6 +6,25 @@ class AppColors {
 
   static final AppColors instance = AppColors._();
 
+  // Design tokens (Figma)
+  /// Primary brand blue — `#079FE0`
+  static const Color primaryColor = Color(0xFF079FE0);
+
+  /// Secondary brand yellow — `#FFB800`
+  static const Color secondaryColor = Color(0xFFFFB800);
+
+  /// Muted brown-grey for secondary text — `#817777`
+  static const Color secondaryTextColor = Color(0xFF817777);
+
+  /// Light grey surfaces — `#F5F5F5`
+  static const Color lightGrey = Color(0xFFF5F5F5);
+
+  /// Medium grey dividers and borders — `#D0D0D0`
+  static const Color mediumGrey = Color(0xFFD0D0D0);
+
+  /// Success / positive accent green — `#4CAF50`
+  static const Color green = Color(0xFF4CAF50);
+
   // Base Colors
   /// Pure white color
   static const Color whiteColor = Colors.white;

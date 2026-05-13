@@ -1,48 +1,34 @@
 import '../../../utils/exports.dart';
 
-/// A BLoC that manages the state of the login process.
-///
-/// This bloc handles user authentication and login form interactions.
-class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  /// Creates a [LoginBloc] instance.
-  LoginBloc() : super(LoginState(formKey: GlobalKey<FormState>())) {
-    on<LoginEmailChanged>(_onEmailChanged);
-    on<LoginPasswordChanged>(_onPasswordChanged);
-    on<LoginSubmitted>(_onLoginSubmitted);
+/// BLoC for the start screen (sign-in / onboarding entry).
+class StartScreenBloc extends Bloc<StartScreenEvent, StartScreenState> {
+  /// Creates a [StartScreenBloc] instance.
+  StartScreenBloc() : super(StartScreenState(formKey: GlobalKey<FormState>())) {
+    on<StartScreenEmailChanged>(_onEmailChanged);
+    on<StartScreenPasswordChanged>(_onPasswordChanged);
+    on<StartScreenSubmitted>(_onSubmitted);
   }
 
-  /// Handles changes to the email field.
-  void _onEmailChanged(LoginEmailChanged event, Emitter<LoginState> emit) {
+  void _onEmailChanged(StartScreenEmailChanged event, Emitter<StartScreenState> emit) {
     emit(state.copyWith(
-      loginLocal: state.loginLocal.copyWith(email: event.email),
+      startScreenLocal: state.startScreenLocal.copyWith(email: event.email),
       status: BaseStateStatus.initial,
     ));
   }
 
-  /// Handles changes to the password field.
-  void _onPasswordChanged(LoginPasswordChanged event, Emitter<LoginState> emit) {
+  void _onPasswordChanged(StartScreenPasswordChanged event, Emitter<StartScreenState> emit) {
     emit(state.copyWith(
-      loginLocal: state.loginLocal.copyWith(
+      startScreenLocal: state.startScreenLocal.copyWith(
         password: event.password,
       ),
       status: BaseStateStatus.initial,
     ));
   }
 
-  /// Validates login form and authenticates with anonymous fallback.
-  Future<void> _onLoginSubmitted(LoginSubmitted event, Emitter<LoginState> emit) async {
+  /// Validates form and signs in anonymously when required.
+  Future<void> _onSubmitted(StartScreenSubmitted event, Emitter<StartScreenState> emit) async {
     emit(state.copyWith(status: BaseStateStatus.loading, errorMessage: null));
     try {
-      final bool isValidForm = state.formKey.currentState?.validate() ?? false;
-      // if (!isValidForm) {
-      //   emit(state.copyWith(
-      //     status: BaseStateStatus.failure,
-      //     errorMessage: getIt<AppRouter>().navigatorKey.currentContext?.appStrings
-      //         .somethingWentWrongKey,
-      //   ));
-      //   return;
-      // }
-
       final FirebaseAuthService authService = getIt<FirebaseService>().auth;
       final User user = await authService.signInAnonymouslyIfRequired();
 
@@ -78,4 +64,3 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     }
   }
 }
-

@@ -1,32 +1,28 @@
 import '../../../../utils/exports.dart';
 
-/// A form widget for handling user login.
-///
-/// This widget provides a responsive login form that adapts to mobile, tablet,
-/// and desktop layouts.
-class LoginForm extends BaseResponsiveView {
-  /// Creates a login form widget.
-  const LoginForm({super.key});
+/// Responsive start screen layout (mobile, tablet, desktop).
+class StartScreenForm extends BaseResponsiveView {
+  /// Creates a start screen form widget.
+  const StartScreenForm({super.key});
 
   @override
   Widget buildTabletWidget(BuildContext context) {
-    return _loginForm(context);
+    return _form(context);
   }
 
   @override
   Widget buildDesktopWidget(BuildContext context) {
-    return _loginForm(context);
+    return _form(context);
   }
 
   @override
   Widget buildMobileWidget(BuildContext context) {
-    return _loginForm(context);
+    return _form(context);
   }
 
-  /// Builds the login form widget.
-  Widget _loginForm(BuildContext context) {
-    return BlocListener<LoginBloc, LoginState>(
-      listener: (BuildContext context, LoginState state) {
+  Widget _form(BuildContext context) {
+    return BlocListener<StartScreenBloc, StartScreenState>(
+      listener: (BuildContext context, StartScreenState state) {
         if (state.status == BaseStateStatus.success &&
             state.routeName != null) {
           unawaited(context.router.replaceNamed(state.routeName!));
@@ -37,7 +33,7 @@ class LoginForm extends BaseResponsiveView {
               state.errorMessage ?? context.appStrings.somethingWentWrongKey);
         }
       },
-      listenWhen: (LoginState previous, LoginState current) =>
+      listenWhen: (StartScreenState previous, StartScreenState current) =>
           previous.routeName != current.routeName ||
           previous.status != current.status,
       child: ColoredBox(
@@ -61,7 +57,7 @@ class LoginForm extends BaseResponsiveView {
                         color: AppColors.darkBlueColor,
                       ),
                   onClick: () {
-                    context.read<LoginBloc>().add(const LoginEvent.submitted());
+                    context.read<StartScreenBloc>().add(const StartScreenEvent.submitted());
                   },
                 ),
                 const SizedBox(height: Dimens.space32),

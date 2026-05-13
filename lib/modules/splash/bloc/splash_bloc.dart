@@ -15,7 +15,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     await Future<dynamic>.delayed(const Duration(seconds: Dimens.duration3));
     emit(state.copyWith(
       status: BaseStateStatus.success,
-      routeName: AppPaths.login,
+      routeName: AppPaths.startScreen,
     ));
   }
 }

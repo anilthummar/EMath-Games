@@ -3,7 +3,7 @@ import '../../../utils/exports.dart';
 ///englisth strings
 class EnUS extends AppString {
   @override
-  String get appNameKey => "Base Structure";
+  String get appNameKey => "Easy Math";
 
   @override
   String get cancelKey => "Cancel";

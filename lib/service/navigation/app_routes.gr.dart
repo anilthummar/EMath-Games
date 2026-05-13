@@ -19,12 +19,13 @@ import 'package:flutter_base/modules/force_update_under_maintenance/ui/force_upd
 import 'package:flutter_base/modules/leaderboard/ui/leaderboard_page.dart'
     as _i6;
 import 'package:flutter_base/modules/learning/ui/learning_page.dart' as _i7;
-import 'package:flutter_base/modules/login/ui/login_page.dart' as _i8;
 import 'package:flutter_base/modules/page_not_found/ui/page_not_found_page.dart'
-    as _i9;
-import 'package:flutter_base/modules/quiz/ui/quiz_page.dart' as _i10;
-import 'package:flutter_base/modules/settings/ui/settings_page.dart' as _i11;
-import 'package:flutter_base/modules/splash/ui/splash_page.dart' as _i12;
+    as _i8;
+import 'package:flutter_base/modules/quiz/ui/quiz_page.dart' as _i9;
+import 'package:flutter_base/modules/settings/ui/settings_page.dart' as _i10;
+import 'package:flutter_base/modules/splash/ui/splash_page.dart' as _i11;
+import 'package:flutter_base/modules/start_screen/ui/start_screen_page.dart'
+    as _i12;
 import 'package:flutter_base/modules/tab_one/ui/tab_one_page.dart' as _i14;
 import 'package:flutter_base/modules/tab_one_detail/ui/tab_one_detail_page.dart'
     as _i13;
@@ -81,23 +82,17 @@ abstract class $AppRouter extends _i17.RootStackRouter {
         child: const _i7.LearningPage(),
       );
     },
-    LoginRoute.name: (routeData) {
-      return _i17.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i8.LoginPage(),
-      );
-    },
     RouteNotFound.name: (routeData) {
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.PageNotFound(),
+        child: const _i8.PageNotFound(),
       );
     },
     QuizRoute.name: (routeData) {
       final args = routeData.argsAs<QuizRouteArgs>();
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i10.QuizPage(
+        child: _i9.QuizPage(
           operation: args.operation,
           difficulty: args.difficulty,
           key: args.key,
@@ -107,13 +102,19 @@ abstract class $AppRouter extends _i17.RootStackRouter {
     SettingsRoute.name: (routeData) {
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i11.SettingsPage(),
+        child: const _i10.SettingsPage(),
       );
     },
     SplashRoute.name: (routeData) {
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i12.SplashPage(),
+        child: const _i11.SplashPage(),
+      );
+    },
+    StartScreenRoute.name: (routeData) {
+      return _i17.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i12.StartScreenPage(),
       );
     },
     TabOneDetailRoute.name: (routeData) {
@@ -242,21 +243,7 @@ class LearningRoute extends _i17.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i8.LoginPage]
-class LoginRoute extends _i17.PageRouteInfo<void> {
-  const LoginRoute({List<_i17.PageRouteInfo>? children})
-      : super(
-          LoginRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'LoginRoute';
-
-  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i9.PageNotFound]
+/// [_i8.PageNotFound]
 class RouteNotFound extends _i17.PageRouteInfo<void> {
   const RouteNotFound({List<_i17.PageRouteInfo>? children})
       : super(
@@ -270,7 +257,7 @@ class RouteNotFound extends _i17.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i10.QuizPage]
+/// [_i9.QuizPage]
 class QuizRoute extends _i17.PageRouteInfo<QuizRouteArgs> {
   QuizRoute({
     required _i18.QuizOperation operation,
@@ -313,7 +300,7 @@ class QuizRouteArgs {
 }
 
 /// generated route for
-/// [_i11.SettingsPage]
+/// [_i10.SettingsPage]
 class SettingsRoute extends _i17.PageRouteInfo<void> {
   const SettingsRoute({List<_i17.PageRouteInfo>? children})
       : super(
@@ -327,7 +314,7 @@ class SettingsRoute extends _i17.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i12.SplashPage]
+/// [_i11.SplashPage]
 class SplashRoute extends _i17.PageRouteInfo<void> {
   const SplashRoute({List<_i17.PageRouteInfo>? children})
       : super(
@@ -336,6 +323,20 @@ class SplashRoute extends _i17.PageRouteInfo<void> {
         );
 
   static const String name = 'SplashRoute';
+
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i12.StartScreenPage]
+class StartScreenRoute extends _i17.PageRouteInfo<void> {
+  const StartScreenRoute({List<_i17.PageRouteInfo>? children})
+      : super(
+          StartScreenRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'StartScreenRoute';
 
   static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }

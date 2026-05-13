@@ -14,7 +14,7 @@ class ForceUpdateUnderMaintenanceBloc
           updateMaintenanceType: UpdateMaintenanceType.none,
         )) {
     on<ForceUpdateCheckRequested>(_onCheckRequested);
-    on<ForceUpdateRedirectToLoginRequested>(_onRedirectToLoginRequested);
+    on<ForceUpdateRedirectToStartScreenRequested>(_onRedirectToStartScreenRequested);
   }
 
   Future<void> _onCheckRequested(
@@ -29,7 +29,7 @@ class ForceUpdateUnderMaintenanceBloc
     switch (type) {
       case UpdateMaintenanceType.none:
         {
-          add(const ForceUpdateRedirectToLoginRequested());
+          add(const ForceUpdateRedirectToStartScreenRequested());
         }
       case UpdateMaintenanceType.force:
         {
@@ -56,11 +56,11 @@ class ForceUpdateUnderMaintenanceBloc
     }
   }
 
-  Future<void> _onRedirectToLoginRequested(
-    ForceUpdateRedirectToLoginRequested event,
+  Future<void> _onRedirectToStartScreenRequested(
+    ForceUpdateRedirectToStartScreenRequested event,
     Emitter<ForceUpdateUnderMaintenanceState> emit,
   ) async {
-    emit(state.copyWith(status: BaseStateStatus.success, pageRouteInfo: const LoginRoute()));
+    emit(state.copyWith(status: BaseStateStatus.success, pageRouteInfo: const StartScreenRoute()));
   }
 
   /// Retrieves remote configuration details.
@@ -163,8 +163,8 @@ class ForceUpdateUnderMaintenanceBloc
     }
   }
 
-  /// Redirects to the login page.
-  void redirectToLogin() {
-    add(const ForceUpdateRedirectToLoginRequested());
+  /// Redirects to the start screen.
+  void redirectToStartScreen() {
+    add(const ForceUpdateRedirectToStartScreenRequested());
   }
 }

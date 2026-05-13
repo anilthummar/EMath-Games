@@ -73,6 +73,9 @@ class $AssetsPngGen {
 class $AssetsSvgsGen {
   const $AssetsSvgsGen();
 
+  /// File path: assets/svgs/ic_app_logo.svg
+  SvgGenImage get icAppLogo => const SvgGenImage('assets/svgs/ic_app_logo.svg');
+
   /// File path: assets/svgs/ic_appbar_logo.svg
   SvgGenImage get icAppbarLogo =>
       const SvgGenImage('assets/svgs/ic_appbar_logo.svg');
@@ -90,6 +93,10 @@ class $AssetsSvgsGen {
 
   /// File path: assets/svgs/ic_home_tab.svg
   SvgGenImage get icHomeTab => const SvgGenImage('assets/svgs/ic_home_tab.svg');
+
+  /// File path: assets/svgs/ic_illustration.svg
+  SvgGenImage get icIllustration =>
+      const SvgGenImage('assets/svgs/ic_illustration.svg');
 
   /// File path: assets/svgs/ic_loan_selected.svg
   SvgGenImage get icLoanSelected =>
@@ -119,11 +126,13 @@ class $AssetsSvgsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
+        icAppLogo,
         icAppbarLogo,
         icAppbarLogoBlue,
         icBigBubbleBgRight,
         icCheck,
         icHomeTab,
+        icIllustration,
         icLoanSelected,
         icMenu,
         icSelectedHomeTab,

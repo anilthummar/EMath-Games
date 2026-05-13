@@ -17,10 +17,10 @@ class AppRouter extends $AppRouter {
             transitionsBuilder: TransitionsBuilders.noTransition,
             durationInMilliseconds: 0),
         CustomRoute(
-          page: LoginRoute.page,
+          page: StartScreenRoute.page,
           maintainState: false,
           guards: <AutoRouteGuard>[AuthenticationMiddleWare()],
-          path: AppPaths.login,
+          path: AppPaths.startScreen,
           transitionsBuilder: TransitionsBuilders.fadeIn,
         ),
         CustomRoute(
@@ -62,7 +62,6 @@ class AppRouter extends $AppRouter {
         AutoRoute(
           path: AppPaths.splash,
           page: SplashRoute.page,
-          guards: <AutoRouteGuard>[MaintenanceMiddleware()],
           initial: true,
         ),
         CustomRoute(path: '*', page: RouteNotFound.page),

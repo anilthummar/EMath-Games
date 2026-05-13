@@ -15,8 +15,8 @@ class ForceUpdateCheckRequested extends ForceUpdateUnderMaintenanceEvent {
   const ForceUpdateCheckRequested();
 }
 
-/// Triggers redirect to login flow.
-class ForceUpdateRedirectToLoginRequested extends ForceUpdateUnderMaintenanceEvent {
+/// Triggers redirect to the start screen flow.
+class ForceUpdateRedirectToStartScreenRequested extends ForceUpdateUnderMaintenanceEvent {
   /// Creates redirect event.
-  const ForceUpdateRedirectToLoginRequested();
+  const ForceUpdateRedirectToStartScreenRequested();
 }

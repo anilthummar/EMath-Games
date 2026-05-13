@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_local.dart';
+part of 'start_screen_local.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,34 +14,34 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-LoginLocal _$LoginLocalFromJson(Map<String, dynamic> json) {
-  return _LoginLocal.fromJson(json);
+StartScreenLocal _$StartScreenLocalFromJson(Map<String, dynamic> json) {
+  return _StartScreenLocal.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LoginLocal {
+mixin _$StartScreenLocal {
   String? get email => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginLocalCopyWith<LoginLocal> get copyWith =>
+  $StartScreenLocalCopyWith<StartScreenLocal> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginLocalCopyWith<$Res> {
-  factory $LoginLocalCopyWith(
-          LoginLocal value, $Res Function(LoginLocal) then) =
-      _$LoginLocalCopyWithImpl<$Res, LoginLocal>;
+abstract class $StartScreenLocalCopyWith<$Res> {
+  factory $StartScreenLocalCopyWith(
+          StartScreenLocal value, $Res Function(StartScreenLocal) then) =
+      _$StartScreenLocalCopyWithImpl<$Res, StartScreenLocal>;
   @useResult
   $Res call({String? email, String? password});
 }
 
 /// @nodoc
-class _$LoginLocalCopyWithImpl<$Res, $Val extends LoginLocal>
-    implements $LoginLocalCopyWith<$Res> {
-  _$LoginLocalCopyWithImpl(this._value, this._then);
+class _$StartScreenLocalCopyWithImpl<$Res, $Val extends StartScreenLocal>
+    implements $StartScreenLocalCopyWith<$Res> {
+  _$StartScreenLocalCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -68,22 +68,22 @@ class _$LoginLocalCopyWithImpl<$Res, $Val extends LoginLocal>
 }
 
 /// @nodoc
-abstract class _$$LoginLocalImplCopyWith<$Res>
-    implements $LoginLocalCopyWith<$Res> {
-  factory _$$LoginLocalImplCopyWith(
-          _$LoginLocalImpl value, $Res Function(_$LoginLocalImpl) then) =
-      __$$LoginLocalImplCopyWithImpl<$Res>;
+abstract class _$$StartScreenLocalImplCopyWith<$Res>
+    implements $StartScreenLocalCopyWith<$Res> {
+  factory _$$StartScreenLocalImplCopyWith(_$StartScreenLocalImpl value,
+          $Res Function(_$StartScreenLocalImpl) then) =
+      __$$StartScreenLocalImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? email, String? password});
 }
 
 /// @nodoc
-class __$$LoginLocalImplCopyWithImpl<$Res>
-    extends _$LoginLocalCopyWithImpl<$Res, _$LoginLocalImpl>
-    implements _$$LoginLocalImplCopyWith<$Res> {
-  __$$LoginLocalImplCopyWithImpl(
-      _$LoginLocalImpl _value, $Res Function(_$LoginLocalImpl) _then)
+class __$$StartScreenLocalImplCopyWithImpl<$Res>
+    extends _$StartScreenLocalCopyWithImpl<$Res, _$StartScreenLocalImpl>
+    implements _$$StartScreenLocalImplCopyWith<$Res> {
+  __$$StartScreenLocalImplCopyWithImpl(_$StartScreenLocalImpl _value,
+      $Res Function(_$StartScreenLocalImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$LoginLocalImplCopyWithImpl<$Res>
     Object? email = freezed,
     Object? password = freezed,
   }) {
-    return _then(_$LoginLocalImpl(
+    return _then(_$StartScreenLocalImpl(
       email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -107,11 +107,13 @@ class __$$LoginLocalImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$LoginLocalImpl with DiagnosticableTreeMixin implements _LoginLocal {
-  const _$LoginLocalImpl({this.email, this.password});
+class _$StartScreenLocalImpl
+    with DiagnosticableTreeMixin
+    implements _StartScreenLocal {
+  const _$StartScreenLocalImpl({this.email, this.password});
 
-  factory _$LoginLocalImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LoginLocalImplFromJson(json);
+  factory _$StartScreenLocalImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StartScreenLocalImplFromJson(json);
 
   @override
   final String? email;
@@ -120,14 +122,14 @@ class _$LoginLocalImpl with DiagnosticableTreeMixin implements _LoginLocal {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginLocal(email: $email, password: $password)';
+    return 'StartScreenLocal(email: $email, password: $password)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'LoginLocal'))
+      ..add(DiagnosticsProperty('type', 'StartScreenLocal'))
       ..add(DiagnosticsProperty('email', email))
       ..add(DiagnosticsProperty('password', password));
   }
@@ -136,7 +138,7 @@ class _$LoginLocalImpl with DiagnosticableTreeMixin implements _LoginLocal {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginLocalImpl &&
+            other is _$StartScreenLocalImpl &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password));
@@ -149,23 +151,24 @@ class _$LoginLocalImpl with DiagnosticableTreeMixin implements _LoginLocal {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoginLocalImplCopyWith<_$LoginLocalImpl> get copyWith =>
-      __$$LoginLocalImplCopyWithImpl<_$LoginLocalImpl>(this, _$identity);
+  _$$StartScreenLocalImplCopyWith<_$StartScreenLocalImpl> get copyWith =>
+      __$$StartScreenLocalImplCopyWithImpl<_$StartScreenLocalImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LoginLocalImplToJson(
+    return _$$StartScreenLocalImplToJson(
       this,
     );
   }
 }
 
-abstract class _LoginLocal implements LoginLocal {
-  const factory _LoginLocal({final String? email, final String? password}) =
-      _$LoginLocalImpl;
+abstract class _StartScreenLocal implements StartScreenLocal {
+  const factory _StartScreenLocal(
+      {final String? email, final String? password}) = _$StartScreenLocalImpl;
 
-  factory _LoginLocal.fromJson(Map<String, dynamic> json) =
-      _$LoginLocalImpl.fromJson;
+  factory _StartScreenLocal.fromJson(Map<String, dynamic> json) =
+      _$StartScreenLocalImpl.fromJson;
 
   @override
   String? get email;
@@ -173,6 +176,6 @@ abstract class _LoginLocal implements LoginLocal {
   String? get password;
   @override
   @JsonKey(ignore: true)
-  _$$LoginLocalImplCopyWith<_$LoginLocalImpl> get copyWith =>
+  _$$StartScreenLocalImplCopyWith<_$StartScreenLocalImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
